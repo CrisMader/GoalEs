@@ -2,9 +2,6 @@
 # exit on error
 set -o errexit
 
-npm install
-npm run build
-
-pipenv install
-
-pipenv run upgrade
+pip install --upgrade pip
+pip install -r requirements.txt
+python migrate.py
